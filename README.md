@@ -2,7 +2,7 @@
 
 ***A player can start a game
 ***There are two players in the game (X and O)
-Players take turns until the game is over
+***Players take turns until the game is over
 A player can claim a field if it is not already taken
 A turn ends when a player claims a field
 A player wins if they claim all the fields in a row, column or diagonal

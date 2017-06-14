@@ -1,18 +1,18 @@
 require 'player'
+require 'board'
 
 class Game
 
   attr_reader :player_1, :player_2, :players, :active_player
 
-  def initialize (player_1 = Player.new, player_2 = Player.new)
-    @player_1 = player_1
-    @player_2 = player_2
-    @players = [@player_1, @player_2]
+  def initialize(players = [Player.new, Player.new])
+    @players = players
     @active_player = @players[0]
+    @board = Board.new
   end
 
   def take_turn
-    @active_player = @player_1 ? @active_player = @player_2 : @active_player = @player_1 
+    @active_player = @players[0] ? @active_player = @players[1] : @active_player = @players[0] 
   end
 
 end
