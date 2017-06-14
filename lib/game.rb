@@ -8,7 +8,7 @@ class Game
   def initialize(players = [Player.new, Player.new])
     @players = players
     @active_player = @players[0]
-    @active_marker = 'x'
+    @active_marker = 'X'
     @board = Board.new.playing_area
   end
 
@@ -18,7 +18,7 @@ class Game
     end
     @board[row][col] = @active_marker 
     @active_player = @players[0] ? @active_player = @players[1] : @active_player = @players[0] 
-    @active_marker = 'x' ? @active_marker = 'o' : @active_marker = 'x' 
+    @active_marker == 'X' ? @active_marker = 'O' : @active_marker = 'X' 
   end
 
   def print_board
